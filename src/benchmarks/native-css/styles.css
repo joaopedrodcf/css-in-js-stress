@@ -1,0 +1,25 @@
+.primary {
+  padding: 5px 10px;
+  margin: 2px;
+  border-radius: 4px;
+}
+
+.primary:hover {
+  cursor: pointer;
+}
+
+.theme-variant-blue {
+  background-color: aqua;
+}
+
+.theme-variant-blue:hover {
+  background-color: aquamarine;
+}
+
+.theme-variant-red {
+  background-color: crimson;
+}
+
+.theme-variant-red:hover {
+  background-color: deeppink;
+}
