@@ -7,7 +7,12 @@ import "./home.css";
 export default () => {
   return (
     <div className="Home">
-      <h1 className="Title">css-in-js-stress 😅</h1>
+      <h1 className="Title">
+        css-in-js-stress{" "}
+        <span role="img" aria-label="Grinning Face With Sweat">
+          😅
+        </span>
+      </h1>
       <h4>Bunch of CSS-in-JS libraries compared for render times.</h4>
       <p>
         Benchmarks will run on clean page according to params provided for the

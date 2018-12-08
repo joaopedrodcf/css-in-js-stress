@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route path="/" component={() => <Home />} />
+          <Route path="/" exact component={() => <Home />} />
           <Route path="/native-css/" component={() => <NativeCss />} />
         </Switch>
       </Router>

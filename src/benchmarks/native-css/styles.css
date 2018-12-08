@@ -1,25 +1,37 @@
-.primary {
+.search-box {
+  display: inline-block;
+  padding: 5px;
+}
+.search-box span {
+}
+.search-box input {
+  padding: 2px 5px;
+  border: none;
+}
+.search-box button {
   padding: 5px 10px;
-  margin: 2px;
-  border-radius: 4px;
+  border: none;
+
+  border-radius: 5px;
+  margin-left: 5px;
 }
 
-.primary:hover {
+.search-box button:hover {
   cursor: pointer;
 }
 
-.theme-variant-blue {
-  background-color: aqua;
+/* Themes go here: */
+.search-box.theme-variant-purple span {
+  color: #9c27b0;
 }
-
-.theme-variant-blue:hover {
-  background-color: aquamarine;
+.search-box.theme-variant-purple input {
+  color: #ba68c8;
+  background-color: #e1bee7;
 }
-
-.theme-variant-red {
-  background-color: crimson;
+.search-box.theme-variant-purple button {
+  color: white;
+  background-color: #9c27b0;
 }
-
-.theme-variant-red:hover {
-  background-color: deeppink;
+.search-box.theme-variant-purple button:hover {
+  background-color: #ab47bc;
 }
