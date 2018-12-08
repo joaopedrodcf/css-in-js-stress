@@ -15,7 +15,8 @@ class TestRunner extends React.PureComponent {
   };
 
   runTest = () => {
-    const url = new URL(`${window.location.href}${this.props.name}`);
+    const url = new URL(`${window.location.href}`);
+    url.hash = `#/${this.props.name}`;
     url.searchParams.set("reloads", this.state.reloads);
     url.searchParams.set("re-renders", this.state.reRenders);
     url.searchParams.set("noComponents", this.props.numberOfComponents);

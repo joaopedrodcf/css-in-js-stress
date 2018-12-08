@@ -56,7 +56,7 @@ class Scene extends PureComponent {
       parsedUrl.searchParams.set("current-reload", currentReload + 1);
       window.location.href = parsedUrl.href;
     } else {
-      window.location.href = "/";
+      window.location.href = "/css-in-js-stress/#";
     }
   };
 

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 
 import NativeCss from "./benchmarks/native-css";
@@ -13,13 +13,15 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route path="/" exact component={() => <Home />} />
-          <Route path="/native-css/" component={() => <NativeCss />} />
+          <Route exact path="/" component={() => <Home />} />
+          <Route exact path="/native-css/" component={() => <NativeCss />} />
           <Route
+            exact
             path="/styled-components-mixed/"
             component={() => <StyledComponentsMixed />}
           />
           <Route
+            exact
             path="/styled-components/"
             component={() => <StyledComponents />}
           />

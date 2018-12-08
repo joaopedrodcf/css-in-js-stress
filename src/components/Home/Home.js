@@ -81,6 +81,20 @@ class Home extends React.PureComponent {
           />
           <Results name="styled-components" />
         </div>
+        <div className="Footer">
+          <div>
+            Hosted by <a href="https://pages.github.com/">GitHub</a>
+          </div>
+          <div>
+            {" "}
+            Made with{" "}
+            <span role="img" aria-label="Love Heart">
+              ❤️
+            </span>{" "}
+            by Maciej Malkowski (
+            <a href="https://github.com/monkey3310">@monkey3310</a>){" "}
+          </div>
+        </div>
       </div>
     );
   }
