@@ -4,6 +4,8 @@ import now from "performance-now";
 var parsedUrl = new URL(window.location.href);
 
 const iterationDelay = 10;
+const numberOfComponents =
+  parseInt(parsedUrl.searchParams.get("noComponents")) || 5000;
 const themeVariant = parsedUrl.searchParams.get("theme") || "purple";
 const maxIterations = parseInt(parsedUrl.searchParams.get("re-renders")) || 0;
 const maxReloads = parseInt(parsedUrl.searchParams.get("reloads")) || 1;
@@ -54,7 +56,7 @@ class Scene extends PureComponent {
       parsedUrl.searchParams.set("current-reload", currentReload + 1);
       window.location.href = parsedUrl.href;
     } else {
-      // window.location.href = "/";
+      window.location.href = "/";
     }
   };
 
@@ -71,7 +73,7 @@ class Scene extends PureComponent {
     const Component = this.props.component;
 
     const components = [];
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < numberOfComponents; i++) {
       components.push(
         <Component text={`${this.state.iteration}_${i}`} key={i} />
       );

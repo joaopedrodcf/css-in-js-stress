@@ -1,0 +1,21 @@
+.search-box {
+  display: inline-block;
+  padding: 5px;
+}
+.search-box span {
+}
+.search-box input {
+  padding: 2px 5px;
+  border: none;
+}
+.search-box button {
+  padding: 5px 10px;
+  border: none;
+
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.search-box button:hover {
+  cursor: pointer;
+}

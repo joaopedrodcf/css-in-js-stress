@@ -28,6 +28,29 @@ button {
   font-size: inherit;
 }
 
+.Settings {
+  padding: 20px;
+  border: 10px double #9c27b0;
+  margin-bottom: 20px;
+}
+
+.Settings input {
+  margin-left: 10px;
+  padding: 2px;
+  width: 75px;
+  text-align: right;
+  border: none;
+  border-bottom: 1px solid #9c27b0;
+  color: #9c27b0;
+}
+
+.SettingsHeader {
+  padding: 0 10px;
+  background-color: white;
+  margin-top: -38px;
+  position: absolute;
+}
+
 .LibBlock {
   padding: 20px;
   border: 10px double #9c27b0;
