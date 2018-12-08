@@ -1,7 +1,6 @@
 # css-in-js-stress 😅
-## Bunch of CSS-in-JS libraries compared for render times.
-
-To run the tests online go here: https://monkey3310.github.io/css-in-js-stress/#/
+### To run the tests online go here: https://monkey3310.github.io/css-in-js-stress/#/
+Bunch of CSS-in-JS libraries compared for render times.
 
 Currently implemented following libraries for comparison:
 * Native CSS solution (no lib)
