@@ -5,7 +5,7 @@ import Container from "./Container";
 import Button from "./Button";
 
 const Test = () => (
-  <Scene container={Container} component={Button} name="NativeCss" />
+  <Scene container={Container} component={Button} name="native-css" />
 );
 
 export default Test;
