@@ -1,18 +1,21 @@
 # css-in-js-stress 😅
+
 ### To run the tests online go here: https://monkey3310.github.io/css-in-js-stress/#/
+
 Bunch of CSS-in-JS libraries compared for render times.
 
 Currently implemented following libraries for comparison:
-* Native CSS solution (no lib)
-* Styled Components (2 implementations)
+
+- Native CSS solution (no lib)
+- Styled Components (2 implementations)
 
 ## How it works
 
-For each implementation, app will render in the browser `Container` with defined number of children `Components`. If re-renders are specified, props of those components will change N times (so they would re-render N times). 
+For each implementation, app will render in the browser `Container` with defined number of children `Components`. If re-renders are specified, props of those components will change N times (so they would re-render N times).
 
-For mesuring multiple full render cycles, after finishing rendering a cycle, app will navigate to next render iteration (full page reload)
+For measuring multiple full render cycles, after finishing rendering a cycle, app will navigate to next render iteration (full page reload)
 
-All time mesurements are stored between session in `localStorage` and can be obtained in form of CSV file with raw data of all runs for analitics.
+All time mesurements are stored between session in `localStorage` and can be obtained in form of CSV file with raw data of all runs for analytics.
 
 ## How to run on my local
 

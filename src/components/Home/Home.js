@@ -42,7 +42,7 @@ class Home extends React.PureComponent {
           Running on react@16.6.3 / react-dom@16.6.3
           <br />
           Wanna add a lib / update version? 👉🏻{" "}
-          <a href="https://github.com/monkey3310/css-in-js-stress">
+          <a href="https://github.com/matmalkowski/css-in-js-stress">
             submit a PR
           </a>
         </p>
@@ -92,7 +92,7 @@ class Home extends React.PureComponent {
               ❤️
             </span>{" "}
             by Maciej Malkowski (
-            <a href="https://github.com/monkey3310">@monkey3310</a>){" "}
+            <a href="https://github.com/matmalkowski">@matmalkowski</a>){" "}
           </div>
         </div>
       </div>

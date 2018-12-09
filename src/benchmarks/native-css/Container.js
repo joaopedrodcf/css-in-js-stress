@@ -1,9 +1,9 @@
 import React from "react";
 
-export default ({ children, themeVariant }) => (
+export default ({ children }) => (
   <React.Fragment>
     {React.Children.map(children, c =>
-      React.cloneElement(c, { themeVariant: themeVariant })
+      React.cloneElement(c, { themeVariant: "purple" })
     )}
   </React.Fragment>
 );

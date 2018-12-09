@@ -2,20 +2,20 @@ export default name => {
   const resultsJson = localStorage.getItem(name);
   let results = [];
   if (resultsJson) results = JSON.parse(resultsJson);
+  if (results.length === 0) return "";
 
   const rows = [];
-  const reloadsHeaders = Array.apply(null, { length: results.length }).map(
-    Number.call,
-    Number
+  const reRenderHeaders = Array.apply(null, {
+    length: results[0].iterations.length
+  }).map(Number.call, Number);
+  rows.push(
+    "Full render number,Full render total time,Iterations ->," +
+      reRenderHeaders.join(",")
   );
-  rows.push("Page load," + reloadsHeaders.join(","));
 
-  rows.push("Total," + results.map(r => r.total).join(","));
-  rows.push("Iterations\r\n");
-  const iterationCount = results[0].iterations.length;
+  results.forEach((r, index) => {
+    rows.push(index + 1 + "," + r.total + ",-," + r.iterations.join(","));
+  });
 
-  for (let i = 0; i < iterationCount; i++) {
-    rows.push(i + 1 + "," + results.map(r => r.iterations[i]).join(","));
-  }
   return rows.join("\r\n");
 };

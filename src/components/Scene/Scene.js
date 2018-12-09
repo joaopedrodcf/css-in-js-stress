@@ -6,7 +6,6 @@ var parsedUrl = new URL(window.location.href);
 const iterationDelay = 10;
 const numberOfComponents =
   parseInt(parsedUrl.searchParams.get("noComponents")) || 5000;
-const themeVariant = parsedUrl.searchParams.get("theme") || "purple";
 const maxIterations = parseInt(parsedUrl.searchParams.get("re-renders")) || 0;
 const maxReloads = parseInt(parsedUrl.searchParams.get("reloads")) || 1;
 const currentReload =
@@ -79,7 +78,7 @@ class Scene extends PureComponent {
       );
     }
     this.startRender = now();
-    return <Container themeVariant={themeVariant}>{components}</Container>;
+    return <Container>{components}</Container>;
   }
 }
 
