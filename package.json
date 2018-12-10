@@ -1,9 +1,10 @@
 {
   "name": "css-in-js-stress",
   "homepage": "https://matmalkowski.github.io/css-in-js-stress/",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "dependencies": {
+    "aphrodite": "^2.2.3",
     "performance-now": "^2.1.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",

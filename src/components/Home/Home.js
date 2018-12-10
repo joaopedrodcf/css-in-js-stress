@@ -81,6 +81,16 @@ class Home extends React.PureComponent {
           />
           <Results name="styled-components" />
         </div>
+        
+        <div className="LibBlock">
+          <TestRunner
+            name="aphrodite"
+            version="2.2.3"
+            description="Pure aphrodite with theme support implemented with ContexAPI wrapper."
+            numberOfComponents={this.state.numberOfComponents}
+          />
+          <Results name="aphrodite" />
+        </div>
         <div className="Footer">
           <div>
             Hosted by <a href="https://pages.github.com/">GitHub</a>
@@ -94,7 +104,8 @@ class Home extends React.PureComponent {
             by Maciej Malkowski (
             <a href="https://github.com/matmalkowski">@matmalkowski</a>){" "}
           </div>
-        </div>
+          <div className="version">[version 0.3.0]</div>
+        </div>        
       </div>
     );
   }

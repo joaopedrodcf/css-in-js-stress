@@ -5,7 +5,7 @@ var parsedUrl = new URL(window.location.href);
 
 const iterationDelay = 10;
 const numberOfComponents =
-  parseInt(parsedUrl.searchParams.get("noComponents")) || 5000;
+  parseInt(parsedUrl.searchParams.get("noComponents")) || 1;
 const maxIterations = parseInt(parsedUrl.searchParams.get("re-renders")) || 0;
 const maxReloads = parseInt(parsedUrl.searchParams.get("reloads")) || 1;
 const currentReload =
