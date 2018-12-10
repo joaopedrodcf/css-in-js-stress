@@ -22,7 +22,7 @@ class Scene extends PureComponent {
     }
   }
 
-  startNextIteration = () => {
+  onFinishedRender = () => {
     this.end = now();
     if (this.state.iteration < maxIterations) {
       this.results.push(this.end - this.startRender);
@@ -59,14 +59,6 @@ class Scene extends PureComponent {
     }
   };
 
-  componentDidMount = () => {
-    this.startNextIteration();
-  };
-
-  componentDidUpdate = () => {
-    this.startNextIteration();
-  };
-
   render() {
     const Container = this.props.container;
     const Component = this.props.component;
@@ -78,7 +70,16 @@ class Scene extends PureComponent {
       );
     }
     this.startRender = now();
-    return <Container>{components}</Container>;
+    return <React.Fragment>
+      <Container>
+      {components}
+      </Container>
+      {React.createElement(this.props.probe, {
+            onAnimationStart: () => {
+              this.onFinishedRender();
+            },
+          })}
+      </React.Fragment>;
   }
 }
 

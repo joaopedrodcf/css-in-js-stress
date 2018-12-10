@@ -7,7 +7,7 @@ import "./home.css";
 class Home extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.state = { numberOfComponents: 5000 };
+    this.state = { numberOfComponents: 1000 };
   }
 
   handleInputChange = event => {
@@ -104,7 +104,7 @@ class Home extends React.PureComponent {
             by Maciej Malkowski (
             <a href="https://github.com/matmalkowski">@matmalkowski</a>){" "}
           </div>
-          <div className="version">[version 0.3.0]</div>
+          <div className="version">[version 0.4.0]</div>
         </div>        
       </div>
     );
