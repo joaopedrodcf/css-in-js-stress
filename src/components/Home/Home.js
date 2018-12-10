@@ -81,7 +81,6 @@ class Home extends React.PureComponent {
           />
           <Results name="styled-components" />
         </div>
-        
         <div className="LibBlock">
           <TestRunner
             name="aphrodite"
@@ -90,6 +89,15 @@ class Home extends React.PureComponent {
             numberOfComponents={this.state.numberOfComponents}
           />
           <Results name="aphrodite" />
+        </div>
+        <div className="LibBlock">
+          <TestRunner
+            name="react-jss"
+            version="8.6.1"
+            description="Pure react-jss with in-build theme support"
+            numberOfComponents={this.state.numberOfComponents}
+          />
+          <Results name="react-jss" />
         </div>
         <div className="Footer">
           <div>
@@ -105,7 +113,7 @@ class Home extends React.PureComponent {
             <a href="https://github.com/matmalkowski">@matmalkowski</a>){" "}
           </div>
           <div className="version">[version 0.4.0]</div>
-        </div>        
+        </div>
       </div>
     );
   }

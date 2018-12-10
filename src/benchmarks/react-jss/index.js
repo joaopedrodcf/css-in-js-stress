@@ -10,7 +10,7 @@ const Test = () => (
     container={Container}
     component={Component}
     probe={Probe}
-    name="native-css"
+    name="react-jss"
   />
 );
 

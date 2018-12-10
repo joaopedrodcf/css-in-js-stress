@@ -1,5 +1,5 @@
-import React from 'react'
-import styled, { keyframes } from 'styled-components';
+import React from "react";
+import styled, { keyframes } from "styled-components";
 
 const probe = keyframes`
   from {
@@ -15,4 +15,6 @@ const StyledComp = styled.div`
   animation: ${probe} 1s;
 `;
 
-export default ({onAnimationStart}) => <StyledComp onAnimationStart={onAnimationStart}>probe</StyledComp>;
+export default ({ onAnimationStart }) => (
+  <StyledComp onAnimationStart={onAnimationStart}>probe</StyledComp>
+);

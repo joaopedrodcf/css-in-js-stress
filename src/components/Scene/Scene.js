@@ -70,16 +70,16 @@ class Scene extends PureComponent {
       );
     }
     this.startRender = now();
-    return <React.Fragment>
-      <Container>
-      {components}
-      </Container>
-      {React.createElement(this.props.probe, {
-            onAnimationStart: () => {
-              this.onFinishedRender();
-            },
-          })}
-      </React.Fragment>;
+    return (
+      <React.Fragment>
+        <Container>{components}</Container>
+        {React.createElement(this.props.probe, {
+          onAnimationStart: () => {
+            this.onFinishedRender();
+          }
+        })}
+      </React.Fragment>
+    );
   }
 }
 

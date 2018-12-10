@@ -1,22 +1,22 @@
-import React from 'react';
-import { StyleSheet, css } from 'aphrodite/';
+import React from "react";
+import { StyleSheet, css } from "aphrodite/";
 
 const sheet = StyleSheet.create({
-    probe: {
-      animationName: [
-        {
-          from: {
-            color: 'red',
-          },
-  
-          to: {
-            color: 'blue',
-          },
+  probe: {
+    animationName: [
+      {
+        from: {
+          color: "red"
         },
-      ],
-      animationDuration: '1s',
-    },
-  });
+
+        to: {
+          color: "blue"
+        }
+      }
+    ],
+    animationDuration: "1s"
+  }
+});
 
 const Probe = ({ onAnimationStart }) => {
   return (

@@ -1,5 +1,3 @@
-import React from "react";
-
 const theme = {
   label: {
     color: "#9c27b0"
@@ -14,7 +12,5 @@ const theme = {
     hover: "#ab47bc"
   }
 };
-
-export const ThemeContext = React.createContext(theme);
 
 export default theme;
