@@ -59,10 +59,16 @@ class Scene extends PureComponent {
     }
   };
 
+  componentDidMount = () => {
+    this.onFinishedRender();
+  };
+  componentDidUpdate = () => {
+    this.onFinishedRender();
+  };
+
   render() {
     const Container = this.props.container;
     const Component = this.props.component;
-
     const components = [];
     for (let i = 0; i < numberOfComponents; i++) {
       components.push(
@@ -72,12 +78,7 @@ class Scene extends PureComponent {
     this.startRender = now();
     return (
       <React.Fragment>
-        <Container>{components}</Container>
-        {React.createElement(this.props.probe, {
-          onAnimationStart: () => {
-            this.onFinishedRender();
-          }
-        })}
+        <Container>{components}</Container>        
       </React.Fragment>
     );
   }
