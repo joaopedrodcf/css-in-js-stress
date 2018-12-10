@@ -22,31 +22,27 @@ class Scene extends PureComponent {
     }
   }
 
-  onFinishedRender = () => {
-    this.end = now();
-    if (this.state.iteration < maxIterations) {
-      this.results.push(this.end - this.startRender);
+  onFinishRender = () => {
+    const end = now();
+    this.results.push(end - this.startRender);
+    console.log(this.results, 'onFinishRender');
+    if (this.results.length < maxIterations) {     
       setTimeout(() => {
         this.setState(currentState => ({
           iteration: currentState.iteration + 1
         }));
       }, iterationDelay);
     } else {
-      this.finished = now();
       this.saveResults();
       this.reload();
     }
-  };
+  }
 
-  saveResults = () => {
-    const save = {
-      iterations: this.results,
-      total: this.finished - this.createdAt - maxIterations * iterationDelay
-    };
+  saveResults = () => {   
     const prevResultsJson = localStorage.getItem(this.props.name);
     let prevResults = [];
     if (prevResultsJson) prevResults = JSON.parse(prevResultsJson);
-    prevResults.push(save);
+    prevResults.push(this.results);
     localStorage.setItem(this.props.name, JSON.stringify(prevResults));
   };
 
@@ -59,16 +55,15 @@ class Scene extends PureComponent {
     }
   };
 
-  componentDidMount = () => {
-    this.onFinishedRender();
-  };
   componentDidUpdate = () => {
-    this.onFinishedRender();
-  };
+    this.onFinishRender();
+  }
 
   render() {
     const Container = this.props.container;
     const Component = this.props.component;
+    const Probe = this.props.probe;
+
     const components = [];
     for (let i = 0; i < numberOfComponents; i++) {
       components.push(
@@ -78,7 +73,8 @@ class Scene extends PureComponent {
     this.startRender = now();
     return (
       <React.Fragment>
-        <Container>{components}</Container>        
+        <Container>{components}</Container>
+        <Probe onAnimationStart={this.onFinishRender}></Probe>        
       </React.Fragment>
     );
   }

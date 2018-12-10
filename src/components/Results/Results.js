@@ -23,22 +23,39 @@ class Results extends React.PureComponent {
     this.setState({ results: [] });
   };
 
+  getResults = () => {
+    try {
+      const totalSum = this.state.results.reduce(
+        (a, v) => a + v.reduce((acc, value) => acc + value, 0),
+        0
+      );
+      const totalAvg = (
+        totalSum /
+        (this.state.results.length * this.state.results[0].length)
+      ).toFixed(0);
+
+      const reRenderSum = this.state.results.reduce(
+        (acc, v) =>
+          acc + v.reduce((a, i, index) => (index === 0 ? a : a + i), 0),
+        0
+      );
+      const reRenderCount =
+        this.state.results.length * (this.state.results[0].length - 1);
+      const reRenderAvg = (reRenderSum / reRenderCount).toFixed(0);
+
+      return { totalAvg: totalAvg, reRenderCount: reRenderCount, reRenderAvg: reRenderAvg };
+    } catch {
+      this.clearResults();
+    }
+  };
+
   render() {
     if (this.state.results.length === 0)
       return (
         <span className="NoResults">No results available. Run test first.</span>
       );
 
-    const totalSum = this.state.results.reduce((acc, v) => acc + v.total, 0);
-    const totalAvg = (totalSum / this.state.results.length).toFixed(0);
-
-    const reRenderSum = this.state.results.reduce(
-      (acc, v) => acc + v.iterations.reduce((a, i) => a + i, 0),
-      0
-    );
-    const reRenderCount =
-      this.state.results.length * this.state.results[0].iterations.length;
-    const reRenderAvg = (reRenderSum / reRenderCount).toFixed(0);
+    const { totalAvg, reRenderCount, reRenderAvg } = this.getResults();
 
     return (
       <React.Fragment>
