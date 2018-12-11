@@ -11,6 +11,19 @@ Currently implemented following libraries for comparison:
 - aphrodite
 - react-jss (jss)
 
+## Some results
+
+Average times for rendering 1000 components, 500 data points used for first render, 4500 data points used for re-render
+
+
+| Library                   | Version | First render time | Re-render time |
+| ------------------------- | :-----: | ----------------: | -------------: |
+| native-css                | -       | 369.9 ms          | 29.1 ms        |
+| styled-components (mixed) | v4.1.2  | 414.6 ms          | 46.6 ms        |
+| react-jss                 | v8.6.1  | 426.7 ms          | 40.9 ms        |
+| aphrodite                 | v2.2.3  | 429.4 ms          | 60.6 ms        |
+| styled-components         | v4.1.2  | 455.8 ms          | 50.4 ms        |
+
 ## How it works
 
 For each implementation, app will render in the browser `Container` with defined number of children `Components`. If re-renders are specified, props of those components will change N times (so they would re-render N times).
