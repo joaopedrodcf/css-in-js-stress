@@ -8,6 +8,8 @@ Currently implemented following libraries for comparison:
 
 - Native CSS solution (no lib)
 - Styled Components (2 implementations)
+- aphrodite
+- react-jss (jss)
 
 ## How it works
 
