@@ -32,6 +32,11 @@ For measuring multiple full render cycles, after finishing rendering a cycle, ap
 
 All time mesurements are stored between session in `localStorage` and can be obtained in form of CSV file with raw data of all runs for analytics.
 
+Mesurements are gathered at:
+* for begin rendering - timestamp in `render()` method before returning the components
+* for finish initial render - callback `onAnimationStart()` called from rendered `Probe` component
+* for finish re-render - timestamp on `componentDidUpdate` method (if you know more accurate place to put it, let me know!)
+
 ## How to run on my local
 
 Clone the repo, `yarn install` the dependencies & `yarn build` to get the production bundle.
