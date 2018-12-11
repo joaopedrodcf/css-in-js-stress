@@ -25,14 +25,13 @@ class Results extends React.PureComponent {
 
   getResults = () => {
     try {
-      const totalSum = this.state.results.reduce(
-        (a, v) => a + v.reduce((acc, value) => acc + value, 0),
+      const firstSum = this.state.results.reduce(
+        (a, v) =>
+          a +
+          v.reduce((acc, value, index) => (index === 0 ? acc + value : acc), 0),
         0
       );
-      const totalAvg = (
-        totalSum /
-        (this.state.results.length * this.state.results[0].length)
-      ).toFixed(0);
+      const totalAvg = (firstSum / this.state.results.length).toFixed(0);
 
       const reRenderSum = this.state.results.reduce(
         (acc, v) =>
@@ -43,7 +42,11 @@ class Results extends React.PureComponent {
         this.state.results.length * (this.state.results[0].length - 1);
       const reRenderAvg = (reRenderSum / reRenderCount).toFixed(0);
 
-      return { totalAvg: totalAvg, reRenderCount: reRenderCount, reRenderAvg: reRenderAvg };
+      return {
+        totalAvg: totalAvg,
+        reRenderCount: reRenderCount,
+        reRenderAvg: reRenderAvg
+      };
     } catch {
       this.clearResults();
     }

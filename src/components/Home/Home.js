@@ -112,7 +112,7 @@ class Home extends React.PureComponent {
             by Maciej Malkowski (
             <a href="https://github.com/matmalkowski">@matmalkowski</a>){" "}
           </div>
-          <div className="version">[version 0.7.1]</div>
+          <div className="version">[version 0.7.3]</div>
         </div>
       </div>
     );
