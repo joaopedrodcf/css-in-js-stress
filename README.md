@@ -18,7 +18,7 @@ Average times for rendering 1000 components, 500 data points used for first rend
 
 | Library                   | Version | First render time | Re-render time |
 | ------------------------- | :-----: | ----------------: | -------------: |
-| native-css                | -       | 369.9 ms          | 29.1 ms        |
+| native css solution       | -       | 369.9 ms          | 29.1 ms        |
 | styled-components (mixed) | v4.1.2  | 414.6 ms          | 46.6 ms        |
 | react-jss                 | v8.6.1  | 426.7 ms          | 40.9 ms        |
 | aphrodite                 | v2.2.3  | 429.4 ms          | 60.6 ms        |
