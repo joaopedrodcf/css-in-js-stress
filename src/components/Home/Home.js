@@ -39,7 +39,7 @@ class Home extends React.PureComponent {
           class overrides for CSS to implement themes
         </p>
         <p>
-          Running on react@16.6.3 / react-dom@16.6.3
+          Running on react@16.12.0 / react-dom@16.12.0
           <br />
           Wanna add a lib / update version? 👉🏻{" "}
           <a href="https://github.com/matmalkowski/css-in-js-stress">
@@ -66,7 +66,7 @@ class Home extends React.PureComponent {
         <div className="LibBlock">
           <TestRunner
             name="styled-components-mixed"
-            version="4.1.2"
+            version="5.0.0-rc.2"
             description="Simple CSS styles for layout + StyledComponents wrapper for theme colors."
             numberOfComponents={this.state.numberOfComponents}
           />
@@ -75,7 +75,7 @@ class Home extends React.PureComponent {
         <div className="LibBlock">
           <TestRunner
             name="styled-components"
-            version="4.1.2"
+            version="5.0.0-rc.2"
             description="Pure StyledComponents with theme support"
             numberOfComponents={this.state.numberOfComponents}
           />
@@ -84,7 +84,7 @@ class Home extends React.PureComponent {
         <div className="LibBlock">
           <TestRunner
             name="aphrodite"
-            version="2.2.3"
+            version="2.4.0"
             description="Pure aphrodite with theme support implemented with ContexAPI wrapper."
             numberOfComponents={this.state.numberOfComponents}
           />
@@ -93,7 +93,7 @@ class Home extends React.PureComponent {
         <div className="LibBlock">
           <TestRunner
             name="react-jss"
-            version="8.6.1"
+            version="10.0.0"
             description="Pure react-jss with in-build theme support"
             numberOfComponents={this.state.numberOfComponents}
           />
@@ -112,7 +112,7 @@ class Home extends React.PureComponent {
             by Maciej Malkowski (
             <a href="https://github.com/matmalkowski">@matmalkowski</a>){" "}
           </div>
-          <div className="version">[version 0.7.3]</div>
+          <div className="version">[version 0.7.4]</div>
         </div>
       </div>
     );
